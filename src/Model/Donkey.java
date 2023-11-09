@@ -4,6 +4,11 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 public class Donkey extends PackAnimal{
+
+    protected AnimalType type;
+    {
+        this.type = AnimalType.Donkey;
+    }
     public Donkey() {
     }
 

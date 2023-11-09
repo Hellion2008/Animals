@@ -4,6 +4,10 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 public class Dog extends Pet{
+    protected AnimalType type;
+    {
+        this.type = AnimalType.Dog;
+    }
     public Dog() {
     }
 
