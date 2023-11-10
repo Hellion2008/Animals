@@ -3,7 +3,7 @@ package Model;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
-
+//TODO: сделать метод обучения новым команадам
 public abstract class Animal {
     protected String name;
     protected LocalDate birthday;

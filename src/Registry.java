@@ -1,8 +1,7 @@
 import Model.Animal;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import java.time.LocalDate;
+import java.util.*;
 
 public class Registry<T extends Animal> {
 
@@ -54,9 +53,31 @@ public class Registry<T extends Animal> {
     }
 
     public void showAllAnimals(){
-        for (Animal animal: animals){
-            System.out.println(animal);
+        for (Integer key: map.keySet()){
+            System.out.println(key + ". " + map.get(key));
         }
     }
-    
+
+    public void showAllAnimalsByBirthday(){
+        animals.sort(Comparator.comparing(Animal::getBirthday));
+        for (Animal animal: animals){
+            System.out.println(findKey(animal) + ". " + animal);
+        }
+    }
+
+    private int findKey(Animal animal){
+        int res = 0;
+        Set<Map.Entry<Integer,Animal>> entrySet=map.entrySet();
+        for (Map.Entry<Integer,Animal> pair : entrySet) {
+            if (animal.equals(pair.getValue())) {
+                res =  pair.getKey();
+            }
+        }
+        return res;
+    }
+
+    public int countOfAnimals(){
+        return animals.size();
+    }
+
 }

@@ -5,13 +5,20 @@ import Model.Dog;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
+//TODO: сделать меню
 public class Program {
     public static void main(String[] args) {
-        Animal cat = new Cat("Bublic", LocalDate.now(), List.of("Fly"));
-        Animal dog = new Dog("Sharik", LocalDate.now(), List.of("Roll", "Sit"));
+        Animal cat = new Cat("Bublic",
+                LocalDate.parse("23.12.2020", DateTimeFormatter.ofPattern("dd.MM.yyyy", Locale.ROOT)),
+                List.of("Fly"));
+        Animal dog = new Dog("Sharik",
+                LocalDate.parse("11.05.2019", DateTimeFormatter.ofPattern("dd.MM.yyyy", Locale.ROOT)),
+                List.of("Roll", "Sit"));
         Animal catC = new AnimalCreator("cat")
                 .setName("Fluffy")
                 .setBirthday(LocalDate.now())
@@ -39,12 +46,16 @@ public class Program {
 //        catC.learnCommand("Jump");
 //        registry.showCommandsByName(catC.getName());
 
-        Controller controller = new Controller();
-        controller.setRegistry(registry);
-        controller.createNewAnimal();
-
-        registry.showCommandsByName("Bob");
+//        Controller controller = new Controller();
+//        controller.setRegistry(registry);
+//        controller.createNewAnimal();
+//
+//        registry.showCommandsByName("Bob");
 
         registry.showAllAnimals();
+        System.out.println("___________________");
+        registry.showAllAnimalsByBirthday();
+
+        System.out.println(registry.countOfAnimals());
     }
 }
