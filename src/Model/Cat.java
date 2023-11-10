@@ -4,11 +4,6 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 public class Cat extends Pet{
-
-    protected AnimalType type;
-    {
-        this.type = AnimalType.Cat;
-    }
     public Cat() {
     }
 
@@ -18,4 +13,16 @@ public class Cat extends Pet{
         this.commands = commands;
     }
 
+    @Override
+    AnimalType getAnimalType() {
+        return AnimalType.Cat;
+    }
+
+    @Override
+    public String toString() {
+        return getAnimalType().toString() + ". " +
+                "Имя: " + name +
+                ", день рождения: " + birthday +
+                ", команды: " + commands + ". ";
+    }
 }

@@ -1,5 +1,4 @@
 package Model;
 
-public class Pet extends Animal{
-    private String ownerName;
+public abstract class Pet extends Animal{
 }

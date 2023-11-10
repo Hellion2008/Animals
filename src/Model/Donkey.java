@@ -5,10 +5,6 @@ import java.util.List;
 
 public class Donkey extends PackAnimal{
 
-    protected AnimalType type;
-    {
-        this.type = AnimalType.Donkey;
-    }
     public Donkey() {
     }
 
@@ -16,5 +12,18 @@ public class Donkey extends PackAnimal{
         this.name = name;
         this.birthday = birthday;
         this.commands = commands;
+    }
+
+    @Override
+    AnimalType getAnimalType() {
+        return AnimalType.Donkey;
+    }
+
+    @Override
+    public String toString() {
+        return getAnimalType().toString() + ". " +
+                "Имя: " + name +
+                ", день рождения: " + birthday +
+                ", команды: " + commands + ". ";
     }
 }

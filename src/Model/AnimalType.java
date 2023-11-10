@@ -13,7 +13,4 @@ public enum AnimalType {
         this.animal = animal;
     }
 
-    public String getAnimal(){
-        return animal;
-    }
 }

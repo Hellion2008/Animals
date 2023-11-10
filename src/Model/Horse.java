@@ -16,4 +16,17 @@ public class Horse extends PackAnimal{
         this.birthday = birthday;
         this.commands = commands;
     }
+
+    @Override
+    AnimalType getAnimalType() {
+        return AnimalType.Horse;
+    }
+
+    @Override
+    public String toString() {
+        return getAnimalType().toString() + ". " +
+                "Имя: " + name +
+                ", день рождения: " + birthday +
+                ", команды: " + commands + ". ";
+    }
 }

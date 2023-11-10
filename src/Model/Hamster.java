@@ -4,10 +4,6 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 public class Hamster extends Pet{
-    protected AnimalType type;
-    {
-        this.type = AnimalType.Hamster;
-    }
     public Hamster() {
     }
 
@@ -15,5 +11,18 @@ public class Hamster extends Pet{
         this.name = name;
         this.birthday = birthday;
         this.commands = commands;
+    }
+
+    @Override
+    AnimalType getAnimalType() {
+        return AnimalType.Hamster;
+    }
+
+    @Override
+    public String toString() {
+        return getAnimalType().toString() + ". " +
+                "Имя: " + name +
+                ", день рождения: " + birthday +
+                ", команды: " + commands + ". ";
     }
 }

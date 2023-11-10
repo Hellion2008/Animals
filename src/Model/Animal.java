@@ -3,7 +3,7 @@ package Model;
 import java.time.LocalDateTime;
 import java.util.List;
 
-public abstract class Animal {
+public abstract class Animal implements LearningAbility{
     protected String name;
     protected LocalDateTime birthday;
     protected List<String> commands;
@@ -30,5 +30,13 @@ public abstract class Animal {
 
     public void setCommands(List<String> commands) {
         this.commands = commands;
+    }
+
+    abstract AnimalType getAnimalType ();
+
+    @Override
+    public List<String> learnCommand(String command) {
+        getCommands().add(command);
+        return getCommands();
     }
 }
