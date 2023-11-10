@@ -1,5 +1,10 @@
 import Model.Animal;
+import Model.AnimalCreator;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.List;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Controller {
@@ -17,11 +22,20 @@ public class Controller {
 
     public void createNewAnimal(){
         try(Scanner scanner = new Scanner(System.in)){
-            System.out.println("Addition new animal...");
-            System.out.println("Enter type of your animal:");
-            scanner.nextLine();
+            System.out.println("Creation of new animal...");
+            System.out.println("Enter type of animal:");
+            AnimalCreator creator = new AnimalCreator(scanner.nextLine());
+            System.out.println("Enter the name of animal:");
+            creator.setName(scanner.nextLine());
+            System.out.println("Enter date of animal's birthday (dd.mm.yyyy)");
+            DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd.MM.yyyy", Locale.ROOT);
+            creator.setBirthday(LocalDate.parse(scanner.nextLine(), dtf));
+            System.out.println("Enter list of commands, which animal can do:");
+            creator.setCommands(List.of(scanner.nextLine().split(" ")));
+            registry.addAnimalToRegistry(creator.create());
+            System.out.println("Animal is added to registry");
         } catch (Exception e){
-            System.out.println("Неверно введены данные!");
+            System.out.println("Invalid data");
             System.out.println(e.getMessage());
         }
     }

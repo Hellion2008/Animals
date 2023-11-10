@@ -3,17 +3,18 @@ import Model.AnimalCreator;
 import Model.Cat;
 import Model.Dog;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Program {
     public static void main(String[] args) {
-        Animal cat = new Cat("Bublic", LocalDateTime.now(), List.of("Fly"));
-        Animal dog = new Dog("Sharik", LocalDateTime.now(), List.of("Roll", "Sit"));
-        Animal catC = new AnimalCreator("кошка")
+        Animal cat = new Cat("Bublic", LocalDate.now(), List.of("Fly"));
+        Animal dog = new Dog("Sharik", LocalDate.now(), List.of("Roll", "Sit"));
+        Animal catC = new AnimalCreator("cat")
                 .setName("Fluffy")
-                .setBirthday(LocalDateTime.now())
+                .setBirthday(LocalDate.now())
                 .setCommands(List.of("Roll", "Sit"))
                 .create();
 //        System.out.println(cat);
@@ -35,9 +36,15 @@ public class Program {
         registry.showCommandsByName(catC.getName());
         registry.showCommandsById(1);
 
-        catC.learnCommand("Jump");
+//        catC.learnCommand("Jump");
 //        registry.showCommandsByName(catC.getName());
 
+        Controller controller = new Controller();
+        controller.setRegistry(registry);
+        controller.createNewAnimal();
 
+        registry.showCommandsByName("Bob");
+
+        registry.showAllAnimals();
     }
 }

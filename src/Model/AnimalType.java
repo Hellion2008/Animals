@@ -1,11 +1,11 @@
 package Model;
 
 public enum AnimalType {
-    Cat ("Кошка"),
-    Dog ("Собака"),
-    Donkey("Осел"),
-    Hamster("Хомяк"),
-    Horse("Лошадь");
+    Cat ("Cat"),
+    Dog ("Dog"),
+    Donkey("Donkey"),
+    Hamster("Hamster"),
+    Horse("Horse");
 
     private String animal;
 

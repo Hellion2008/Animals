@@ -1,5 +1,6 @@
 package Model;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -7,7 +8,7 @@ public class Cat extends Pet{
     public Cat() {
     }
 
-    public Cat(String name, LocalDateTime birthday, List<String> commands) {
+    public Cat(String name, LocalDate birthday, List<String> commands) {
         this.name = name;
         this.birthday = birthday;
         this.commands = commands;
@@ -21,8 +22,8 @@ public class Cat extends Pet{
     @Override
     public String toString() {
         return getAnimalType().toString() + ". " +
-                "Имя: " + name +
-                ", день рождения: " + birthday +
-                ", команды: " + commands + ". ";
+                "Name: " + name +
+                ", birthday: " + birthday +
+                ", commands: " + commands + ". ";
     }
 }

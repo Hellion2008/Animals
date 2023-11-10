@@ -53,5 +53,10 @@ public class Registry<T extends Animal> {
         System.out.println("Животного с тамким id нет в реестре");
     }
 
+    public void showAllAnimals(){
+        for (Animal animal: animals){
+            System.out.println(animal);
+        }
+    }
     
 }

@@ -1,11 +1,12 @@
 package Model;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
-public abstract class Animal implements LearningAbility{
+public abstract class Animal {
     protected String name;
-    protected LocalDateTime birthday;
+    protected LocalDate birthday;
     protected List<String> commands;
 
     public String getName() {
@@ -16,11 +17,11 @@ public abstract class Animal implements LearningAbility{
         this.name = name;
     }
 
-    public LocalDateTime getBirthday() {
+    public LocalDate getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(LocalDateTime birthday) {
+    public void setBirthday(LocalDate birthday) {
         this.birthday = birthday;
     }
 
@@ -33,10 +34,4 @@ public abstract class Animal implements LearningAbility{
     }
 
     abstract AnimalType getAnimalType ();
-
-    @Override
-    public List<String> learnCommand(String command) {
-        getCommands().add(command);
-        return getCommands();
-    }
 }
