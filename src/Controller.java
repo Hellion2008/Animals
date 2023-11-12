@@ -1,5 +1,7 @@
 import Model.Animal;
 import Model.AnimalCreator;
+import Model.Dog;
+import Model.LearningAbility;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -66,7 +68,10 @@ public class Controller {
                         registry.showCommandsByName(reader.readLine());
                         break;
                     case 3:
-                        ;
+                        System.out.println("Enter name of animal:");
+                        Animal tmp = registry.findAnimalByName(reader.readLine());
+                        System.out.println("Enter new commands separated by a space: ");
+                        tmp.learnCommand(tmp, reader.readLine());
                         break;
                     case 4:
                         registry.showAllAnimalsByBirthday();
@@ -81,7 +86,7 @@ public class Controller {
                         System.out.println("No action");
                 }
                 System.out.println(menu);
-                System.out.println();
+                System.out.println("---------------------------------");
                 num = Integer.parseInt(reader.readLine());
             } while (num != 0);
         }

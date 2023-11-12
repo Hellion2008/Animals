@@ -80,4 +80,14 @@ public class Registry<T extends Animal> {
         return animals.size();
     }
 
+    public Animal findAnimalByName(String name){
+        for (Animal el: animals){
+            if (name.equals(el.getName())){
+                return el;
+            }
+        }
+        System.out.println("Животного с таким именем нет в реестре");
+        return  null;
+    }
+
 }
