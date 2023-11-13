@@ -1,0 +1,75 @@
+876  docker ps -a
+  877  sudo docker ps -a
+  878  sudo docker images
+  879  sudo docker run ramonvc/freegpt-webui
+  880  sudo start_gpt
+  881  sudo systemctl restart docker
+  882  sudo start_gpt
+  883  sudo docker ps
+  884  sudo docker ps -a
+  885  sudo docker pull ramonvc/freegpt-webui
+  886  sudo echo 'alias start_gpt="docker run -p 1338:1338 -d ramonvc/freegpt-webui"' >> ~/.bashrc
+  887  sudo source .bashrc
+  888  source .bashrc
+  889  start_gpt
+  890  sudo start_gpt
+  891  start_gpt
+  892  sudo docker run ramonvc/freegpt-webui
+  893  start_gpt
+  894  sudo start_gpt
+  895  sudo docker pull ramonvc/freegpt-webui
+  896  sudo echo 'alias start_gpt="docker run -p 1338:1338 -d ramonvc/freegpt-webui"' >> ~/.bashrc
+  897  source .bashrc
+  898  start_gpt
+  899  sudo apt update
+  900  sudo apt upgrade
+  901  cat > Pets
+  902  cat > Pack Animals
+  903  cat > PackAnimals
+  904  ll
+  905  cat > PackAnimals 
+  906  nano PackAnimals 
+  907  cat Pets PackAnimals > HumanFriends
+  908  nano HumanFriends 
+  909  mkdir Animals
+  910  ll
+  911  mv HumanFriends Animals/
+  912  cd Animals
+  913  ll
+  914  cd ..
+  915  sudo nano /etc/apt/sources.list
+  916  sudo nano /etc/apt/sources.list.d/*.list
+  917  sudo cd  /etc/apt/sources.list.d/
+  918  cd /etc/apt/sources.list.d/
+  919  ll
+  920  cd
+  921  ll
+  922  cd Pfuheprb
+  923  cd Загрузки
+  924  ll
+  925  cd
+  926  sudo apt search mysql
+  927  cd /etc/apt/sources.list.d/
+  928  ll
+  929  sudo nano mysql.list
+  930  ll
+  931  sudo nano mysql.list
+  932  sudo apt install mysql-8.0
+  933  sudo apt-get install mysql-8.0
+  934  sudo apt-get install mysql-server
+  935  sudo apt install mysql-server
+  936  history 10
+  937  history
+  938  dpkg -l
+  939  dpkg -i mc
+  940  sudo dpkg -i mc
+  941  wget http://archive.ubuntu.com/ubuntu/pool/universe/m/mc/mc_4.8.24-2ubuntu1_amd64.deb
+  942  sudo wget http://archive.ubuntu.com/ubuntu/pool/universe/m/mc/mc_4.8.24-2ubuntu1_amd64.deb
+  943  sudo dpkg -i mc_4.8.24-2ubuntu1_amd64.deb 
+  944  sudo apt install -f
+  945  mc
+  946  sudo dpkg -r mc_4.8.24-2ubuntu1_amd64.deb 
+  947  sudo dpkg -r mc 
+  948  mc
+  949  history 100
+  950  history 75
